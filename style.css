@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #e0e0e0;
+    color: #122543;
+    font-weight: 400;
+  }
+  
+  .curriculo-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .cabecalho__foto-nome {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+.cabecalho__foto {
+  width: 2016x;
+  height: 216px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 3px solid #122543;
+  background: url('foto.jpg') lightgray -64.072px -85.312px / 132.3% 131.859% no-repeat;
+  object-fit: cover; /* Garante que a imagem se ajuste ao tamanho */
+}
+  
+  .cabecalho__info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .cabecalho__nome {
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #122543;
+  }
+  
+  .cabecalho__contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #fff; /* Texto branco */
+  }
+  
+  .cabecalho__contatos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 32px; /* espaço entre linhas e colunas */
+    margin-top: 24px;
+    width: 100%;
+  }
+  
+  .contato-btn {
+    display: flex;
+    align-items: center;
+    background: #122543;
+    color: #fff;
+    border-radius: 14px;
+    padding: 16px 24px;
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-decoration: none;
+    gap: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: background 0.2s;
+  }
+  
+  .contato-btn:hover {
+    background: #081a3a;
+  }
+  
+  .icon {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-email { background-image: url('https://cdn.jsdelivr.net/gh/feathericons/feather@4.28.0/icons/mail.svg'); }
+  .icon-linkedin { background-image: url('https://cdn.jsdelivr.net/gh/feathericons/feather@4.28.0/icons/linkedin.svg'); }
+  .icon-github { background-image: url('https://cdn.jsdelivr.net/gh/feathericons/feather@4.28.0/icons/github.svg'); }
+  .icon-localizacao { background-image: url('https://cdn.jsdelivr.net/gh/feathericons/feather@4.28.0/icons/map-pin.svg'); }
+  .icon-whatsapp { background-image: url('https://cdn.jsdelivr.net/gh/feathericons/feather@4.28.0/icons/phone.svg'); }
+  
+  .bloco-unico {
+    width: 100%;
+  }
+  
+  .bloco {
+    background: #ffffff;
+    padding: 22px 24px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .bloco__titulo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0px;; 
+    color: #122543;
+  }
+
+  .bloco p {
+    margin: 0;
+    text-align: justify;
+  }
+  
+  .experiencia h3 {
+    margin: 0 0 0px 0;
+    font-size: 1.05rem;
+  }
+  .bloco .formacao h3 {
+    margin: 0px 0 0px 0; /* Superior, direita, inferior, esquerda */
+  }
+  
+  .formacao-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* duas colunas */
+    gap: 12px 32px; /* espaço entre linhas e colunas */
+  }
+
+  footer {
+  text-align: center;
+  font-size: 0.9rem; /* Deixa o texto menor */
+  color: #122543; /* Cor do texto */
+  
+}
+  
+
+  @media (max-width: 900px) {
+    .cabecalho__foto-nome {
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    .bloco-unico {
+      width: 95%;
+      margin: 0 auto;
+    }
+    .cabecalho__contatos-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .formacao-lista {
+      grid-template-columns: 1fr; /* uma coluna no mobile */
+      gap: 8px 0;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .curriculo-container {
+      padding: 6px;
+    }
+    .bloco {
+      padding: 12px 8px;
+    }
+    .cabecalho__nome {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 1920px) {
+  .formacao-lista {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 32px;
+  }
+}
+
+body.dark-mode {
+  background: #181c25;
+  color: #f5f5f5;
+}
+
+body.dark-mode .bloco {
+  background: #232a3a;
+  color: #f5f5f5;
+  border: 1px solid #555555;
+}
+
+body.dark-mode .bloco__titulo,
+body.dark-mode .cabecalho__nome,
+body.dark-mode .contato-btn {
+  color: #f5f5f5;
+}
+
+body.dark-mode .contato-btn {
+  background: #23305a;
+}
+
+body.dark-mode .contato-btn:hover {
+  background: #1f4e74;
+}
+
+.toggle-dark-btn {
+  position: absolute;
+  top: 3px;
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta para que o centro do botão fique alinhado */
+  z-index: 1000;
+  background: #122543;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.toggle-dark-btn:hover {
+  background: #23305a;
+}
