@@ -209,21 +209,27 @@ body.dark-mode .contato-btn {
   color: #f5f5f5;
 }
 
+body.dark-mode .cabecalho__foto {
+  border: 2px solid #ffffff; /* Define a borda branca no modo dark */
+}
+
 body.dark-mode .contato-btn {
-  background: #23305a;
+  background: #232a3a;
+  border: 1px solid #555555;
 }
 
 body.dark-mode .contato-btn:hover {
-  background: #1f4e74;
+  background: #455375;
+  border: 1px solid #555555;
 }
 
 .toggle-dark-btn {
   position: absolute;
-  top: 3px;
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta para que o centro do botão fique alinhado */
+  top: 0.5rem;
+  left: 50%; 
+  transform: translateX(-50%);
   z-index: 1000;
-  background: #122543;
+  background: #232a3a;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -232,5 +238,9 @@ body.dark-mode .contato-btn:hover {
   cursor: pointer;
 }
 .toggle-dark-btn:hover {
-  background: #23305a;
+  background: #455375;
+}
+
+body.dark-mode footer{
+  color: #fff;
 }
